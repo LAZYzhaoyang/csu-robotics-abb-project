@@ -1,0 +1,39 @@
+one camera
+
+
+change the ip_address and reboot the computer
+
+the camera ip_address format is 169.254.a.b
+
+camera-ip-conf -l  check the camera is linked
+
+
+camera-ip-conf set ip=192.168.12.12 subnet=255.255.255.0 gateway=0.0.0.0 -s <camera_id>
+
+
+camera-ip-conf set static=on -s <camera_id>
+
+
+camera-ip-conf forceip ip=192.168.12.12 subnet=255.255.255.0 gataway=0.0.0.0 -s <camera_id>
+
+
+
+
+gige-daemon start     open this camera
+
+
+gige-daemon stop      close this camera
+
+
+tcam-ctrl -l
+
+
+
+
+Exchange "10710286" by the serial numbers of your camera.
+
+ 
+The program "tcam-ctrl -c <serialnumber>" lists the available video formats and their frame rates. 
+
+
+This sample line will use 1920x1080 with 15 frames per second colored.

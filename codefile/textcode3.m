@@ -1,0 +1,13 @@
+clear
+clc
+img=imread('009.jpg');
+figure
+imshow(img);
+figure
+img2gray=rgb2gray(img);
+imshow(img2gray);
+figure
+%thresh=graythresh(img2gray);
+thresh=148/255;
+img2=im2bw(img2gray,thresh);
+imshow(img2)
